@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    /*background-color: black;*/
+    
+    background-color: rgb(245, 245, 245);
+}
+/************    HOME    ***********/
+section.home{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+div.content{
+    /*background-color: coral;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 32px;*/
+}
+section.phone-img{
+    background-image: url('../images/phone.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 454px;
+    height: 618px;
+    margin-right: 0px;
+
+   /* background-color: red;*/
+}
+@media screen and (max-width: 830px){
+    section.phone-img{
+        display: none;
+    }
+
+}
+
+div.phone{
+    width: 240px;
+    height: 427px;
+    position: relative;
+    left: 151px;
+    top: 100px;
+    /*background-color: green;
+    */background-image: url('../images/0a2d3016f375.jpg');
+    animation-name: img-in;
+    -webkit-animation-name: img-in;
+    animation-delay: 3s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+}
+@keyframes img-in {
+    0% { 
+        background-image: url('../images/0a2d3016f375.jpg'); 
+    }
+    25%{
+        background-image: url('../images/6f03eb85463c.jpg');
+    }
+    50% {
+        background-image: url('../images/842fe5699220.jpg');
+    }
+    75%{
+        background-image: url('../images/d6bf0c928b5a.jpg');
+    }
+    100%{
+        background-image: url('../images/0a2d3016f375.jpg');
+    }
+  }
+
+
+
+section.container{
+    width: 350px;
+    height: 606px;
+    margin-top: 32px;
+    text-align: center;
+
+}
+
+div.name-warp{
+    width: 100%;
+    padding: 120px;
+}
+
+div.form{
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    padding: 10px;
+    height: 368px;
+}
+
+.form > h1{
+    background-image: url('../images/instagram-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: baseline;
+    margin-top: 22px;
+    margin-left: 50%;
+    margin-bottom: 20px;
+    transform: translate(-50%);
+    width: 175px;
+    height: 51px;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+
+div.form input{
+    padding-left: 8px;
+    font-size: 12px;
+    width: 268px;
+    height: 38px;
+    margin-top: 7px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+::-webkit-input-placeholder{
+    color: #b6b6b6;
+}
+
+div.form input.button{
+    margin-top: 15px;
+    height: 31px;
+    background-color: #b2dffc;
+    color: white;
+    font-size: 14px;
+    font-weight:bold;
+    border: none;
+    cursor: pointer;
+}
+div.wrap-trace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.wrap-trace div.trace{
+    position: relative;
+    height: 1px;
+    width: 35%;
+    background-color: rgb(165, 165, 165);
+}
+div.form p{
+    margin: 0 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+div.social-media-login{
+    display: flex;
+    margin: 8px 40px;
+    align-items: center;
+    justify-content: center;
+    
+}
+div.social-media-icon{
+    background-image: url('../images/facebook-icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 20px;
+    margin-right: 5px;
+}
+div.social-media-login a{
+    text-decoration: none;
+    color: #385185;
+    font-size: 14px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+a.recover{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #4a67eb;
+}
+
+div.sing-in{
+    margin-top: 10px;
+    border: 1px solid #dbdbdb;
+    height: 50px;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 11px;
+    
+    background-color: white;
+}
+div.sing-in span{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+div.sing-in span a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(82, 117, 223);
+}
+
+p.download{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.app-store{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    height: min-content;
+}
+
+div.app-store img{
+    height: 40px;
+}
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #c2c2c2;
+}
+
+.footer-wrap{
+    /*width: 40%;*/
+    width: 600px;
+}
+@media screen and (max-width: 585px){
+    .footer-wrap{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+}
+.footer-wrap a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #c2c2c2;
+
+}
+
+div.copy{
+    margin-top: 20px;
+}
+
+div.copy span{
+    margin-left: 20px;
+}

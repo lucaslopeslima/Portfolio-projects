@@ -1,0 +1,143 @@
+:root{
+    --border-width: 3px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-image: url('../images/pexels-photo-347139.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px;
+}
+.sort{
+    /* border: 3px dashed rgba(250, 86, 86, 0.788);
+    border-bottom: none; */
+    margin: 0 auto;
+    width: 500px;
+    background-color: rgb(235, 235, 235);
+    height: 300px;
+    position: relative;
+    h1{
+        width: 500px;
+        margin: 0 auto;
+        font-size: 180px;
+        text-align: center;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+        border-radius: 3px;
+        border-color: #db600eef;
+        background-color: #f78b2694;
+        position: absolute;
+        font-size: 18px;
+        bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        -webkit-box-shadow: inset 0px 0px 15px 5px #FF0000; 
+        box-shadow: inset 0px 0px 15px 5px #FF0000;
+}
+
+}
+
+div.container{
+    /* border: 3px dashed rgba(250, 86, 86, 0.788);
+    border-top: none; */
+    background-image: url('../images/cartela1-limpa.png');
+    background-size: cover;
+    margin: 0 auto;
+    padding: 30px;
+    width: 500px;
+    height: 490px;
+    padding-top: 70px;
+    /* background-color: rgba(0, 0, 255, 0.212); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    div.numeros{
+        text-align: center;
+        font-size: 58px;
+        width: 80px;
+        height: 50px;
+        /* background-color: #eae5f0b0; */
+        cursor: pointer;
+        border-radius: 20px ;
+        -webkit-border-radius: 20px ;
+        -moz-border-radius: 20px ;
+        -ms-border-radius: 20px ;
+        -o-border-radius: 20px ;
+        user-select: none;
+        &:hover{
+            background-color: burlywood;
+        }
+        
+
+    }
+}
+
+
+
+
+
+
+
+
+.gradient-border {
+  
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 790px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222; */
+    border-radius: var(--border-width);
+  
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(500px + var(--border-width) * 2);
+      height: calc(790px + var(--border-width) * 2);
+      background: linear-gradient(
+        60deg,
+        hsl(224, 85%, 66%),
+        hsl(269, 85%, 66%),
+        hsl(314, 85%, 66%),
+        hsl(359, 85%, 66%),
+        hsl(44, 85%, 66%),
+        hsl(89, 85%, 66%),
+        hsl(134, 85%, 66%),
+        hsl(179, 85%, 66%)
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      animation: moveGradient 4s alternate infinite;
+    }
+  }
+  
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }

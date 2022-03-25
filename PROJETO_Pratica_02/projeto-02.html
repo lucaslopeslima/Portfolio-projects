@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Minha Landing Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<meta name="description" content="Conteúdo do meu site.">
+	<meta name="keywords" content="palavras,separadas,por,virgula">
+	<meta name="author" content="Lucas Lima" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<header>
+	<div class="container-header">
+		<div><div class="logo-1"><span>LOGO</span></div><!--logo-1--></div>
+		<div><div class="logo-2"><span>Uma Assinatura</span></div><!--logo-2--></div>
+		<div class="clear"></div><!--clear-->
+	</div><!--container-->
+</header>
+
+<section class="cover-form">
+	<div class="container bg">
+		<div class="form-container">
+			<div class="text-effect-wrapper">
+				<div class="text-effect-bg">
+					<h2>VENHA CONFERIR NOSSO EVENTO!</h2>
+				</div><!--text-effect-bg-->
+			</div><!--text-effect-wrapper-->
+			<form>
+				<div class="form-wraper">
+					<p>Nome Completo*</p>
+					<input type="text" name="nome" required placeholder="Nome">
+				</div><!--form-wraper-->
+
+				<div class="form-wraper">
+					<p>E-mail*</p>
+					<input type="text" name="email" required placeholder="E-mail">
+				</div><!--form-wraper-->
+
+				<div class="form-wraper">
+					<p>Telefone*</p>
+					<input type="text" name="telefone" required placeholder="Telefone">
+				</div><!--form-wraper-->
+
+				<div class="form-wraper">
+					<div class="border-wrap">
+						<div class="botao-bg"><a href="" class="botao"><span>enviar</span></a></div>
+						<!--<input type="submit" name="acao" value="Enviar">-->
+					</div><!--border-wrap-->
+				</div><!--form-wraper-->
+				<div class="form-wraper">
+					<p>* Campos Obrigatórios</p>
+				</div><!--form-wraper-->
+			</form>
+		</div><!--form-container-->
+	</div><!--container-->
+</section><!--cover-form-->
+
+<section class="chamada">
+<!--
+	Feito em OFF o icone centralizado na sessão!
+	Estudar o CSS.
+-->
+<div class="icone-seta"></div>
+	<div class="container">
+	<div><h2>Minha chamada para o evento</h2></div>
+	<div><p>Alguma mensagem para a chamada</p></div>
+	</div><!--container-->
+</section><!--chamada-->
+
+<section class="mosaico">
+
+	<div class="container">
+
+		<div class="flex-mosaico">
+		<div style="background-image:url('imagens/pexels-photo-6397651.jpeg');" class="item-1-mosaico"></div><!--item1-mosaico-->
+
+		<div class="item-2-mosaico">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo eu sapien ultricies dignissim. Vestibulum feugiat interdum pharetra. Curabitur vulputate a lectus nec maximus. Quisque id interdum eros. Donec porta nibh eget diam consectetur fringilla. Proin in urna faucibus, volutpat enim a, maximus ipsum</p>
+		</div><!--item2-mosaico-->
+
+		</div><!--flex-mosaico-->
+
+		<div class="flex-mosaico">
+		<div style="background-image:url('imagens/pexels-photo-5097284.jpeg');order:2;" class="item-1-mosaico"></div><!--item1-mosaico-->
+
+		<div class="item-2-mosaico" style="order:1;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo eu sapien ultricies dignissim. Vestibulum feugiat interdum pharetra. Curabitur vulputate a lectus nec maximus. Quisque id interdum eros. Donec porta nibh eget diam consectetur fringilla. Proin in urna faucibus, volutpat enim a, maximus ipsum</p>
+		</div><!--item2-mosaico-->
+
+		</div><!--flex-mosaico-->
+
+				<div class="flex-mosaico">
+		<div style="background-image:url('imagens/pexels-photo-3735149.jpeg');" class="item-1-mosaico"></div><!--item1-mosaico-->
+
+		<div class="item-2-mosaico">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo eu sapien ultricies dignissim. Vestibulum feugiat interdum pharetra. Curabitur vulputate a lectus nec maximus. Quisque id interdum eros. Donec porta nibh eget diam consectetur fringilla. Proin in urna faucibus, volutpat enim a, maximus ipsum</p>
+		</div><!--item2-mosaico-->
+
+		</div><!--flex-mosaico-->
+
+		<div class="flex-mosaico">
+		<div style="background-image:url('imagens/pexels-photo-322207.jpeg');order:2;" class="item-1-mosaico"></div><!--item1-mosaico-->
+
+		<div class="item-2-mosaico" style="order:1;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo eu sapien ultricies dignissim. Vestibulum feugiat interdum pharetra. Curabitur vulputate a lectus nec maximus. Quisque id interdum eros. Donec porta nibh eget diam consectetur fringilla. Proin in urna faucibus, volutpat enim a, maximus ipsum</p>
+		</div><!--item2-mosaico-->
+
+		</div><!--flex-mosaico-->
+
+	</div><!--container-->
+
+</section><!--mosaico-->
+
+
+<footer>
+	<div class="container">
+		<div class="footer-effect">
+			<p>&copy; Powered by Lucas Lima</p>
+		</div>
+	</div><!--container-->
+</footer>
+
+
+<script>
+	var posicao = localStorage.getItem('posicaoScroll');
+
+/* Se existir uma opção salva seta o scroll nela */
+if(posicao) {
+    /* Timeout necessário para funcionar no Chrome */
+    setTimeout(function() {
+        window.scrollTo(0, posicao);
+    }, 1);
+}
+
+/* Verifica mudanças no Scroll e salva no localStorage a posição */
+window.onscroll = function (e) {
+    posicao = window.scrollY;
+    localStorage.setItem('posicaoScroll', JSON.stringify(posicao));
+}
+</script>
+
+</body>
+</html>

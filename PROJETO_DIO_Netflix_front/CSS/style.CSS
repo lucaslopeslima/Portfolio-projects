@@ -1,0 +1,244 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+/********* RESET **********/
+
+
+body{
+    background-color: var(--preto);
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+}
+
+header .container{
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center; /* alinha verticamlente*/
+    justify-content: space-between; /* espaço entre os elementos*/
+    background-color:var(--preto);
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+header nav a:hover{
+    color: #FFF;
+}
+
+header nav.menu-mobile{
+    display: none;
+}
+
+@media (max-width: 620px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+/************* fundo   ***************/
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+main{
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  /*padding-top: 75%;
+  */position: relative;
+  animation: trailer 1.6s linear 60s 1 normal forwards;
+  -webkit-animation: trailer 1.6s linear 60s 1 normal forwards;
+  
+}
+@keyframes trailer {
+    from{
+
+    }
+    to{
+        height: 780px;
+        background-image: url('../images/capa-house.jpg');
+        background-size: cover ;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 1350px){
+    main{
+        background-position: top center;
+    }
+}
+
+main video{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: -1;
+}
+
+
+/*.filme-principal{
+    background: linear-gradient(rgba(0, 0, 0, 0)80%, rgba(0, 0, 0, .8)100%), ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}*/
+
+.filmer-principal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+
+.filme-principal .container{
+    /*height: 100%;
+  display: flex;
+  align-items: center;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  
+    
+}
+.filme-principal .container .container-wrapper{
+    position: absolute;
+    bottom: 260px;
+    
+}
+
+@media (max-width: 510px){
+    .filme-principal .container{
+        width: 95%;
+    }
+    .filme-principal .descricao{
+        width: 300px;
+    }
+
+}
+
+
+/*@media (min-aspect-ratio: 16/9) {
+    #video-BG {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #video-BG { 
+        width:auto;
+        height: 100%;
+    }
+}*/
+@media (max-width: 1022px) {
+    #video-BG {
+        display: none;
+        visibility: hidden;
+        
+        
+        
+    }
+    main{
+        height: 780px;
+        background-image: url('../images/capa-house.jpg');
+        background-size: cover ;
+        background-repeat: no-repeat;
+    }
+    /*.filme-principal {
+        height: 780px;
+        background: url('../images/capa-house.jpg');
+        background-size: cover;
+        background-position: center;
+    }*/
+}
+
+
+
+.filme-principal .descricao{
+    margin-top: 25px;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+/*.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}*/
+.titulo{
+    background-image: url('../images/pngwing.com.png');
+    width: 230px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color:white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+}
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+.botao:last-of-type{
+    margin-right: 0
+}
+.botao i{
+    margin-right: 4px;
+}
+.movie-list-wrapper{
+    margin-top: -250px;
+}
+.box-movie{
+    width: 100px;
+    display: block;
+}
+.movie-marker:first-of-type{
+    margin-top: -25px;
+}
+.movie-marker{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+    overflow-y: hidden;
+    background-image: url('../images/pexels-photo-7712535.jpeg');
+    background-size: cover;
+}
+h1, h2{
+    text-align: center;
+    color: white;
+}
+h2{
+    margin-bottom: 40px;
+}
+div.container{
+    max-width: 300px;
+    margin: auto;
+    margin-top: 150px;
+    background-color: rgba(109, 109, 109, 0.336);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background: #CE5937;
+    background: -moz-linear-gradient(45deg, #CE5937 0%, #DDED5F 0%, #C55C27 100%);
+    background: -webkit-linear-gradient(45deg, #CE5937 0%, #DDED5F 0%, #C55C27 100%);
+    background: linear-gradient(45deg, #CE5937 0%, #DDED5F 0%, #C55C27 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 15px -10px #000000; 
+    box-shadow: 10px 10px 15px -10px #000000;
+} */
+
+
+.button-wrap{
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+}
+.pushable {
+    background: rgb(170, 0, 0);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+.front {
+    margin-left: 0;
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: red;
+    color: white;
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+}
+  
+.pushable:active .front {
+    transform: translateY(-2px);
+}
+
+
+
+p.para{
+    margin-top: 15px;
+}
+span{
+    margin-left: 25px;
+    text-decoration: dotted;
+    display: block;
+}
+.text{
+    color: white;
+}

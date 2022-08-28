@@ -1,5 +1,5 @@
 # Starbucks template
- Template
+ Template tutorial no youtube que eu utilizei como uma challenge pessoal (CSS only).
  
  
 ![capa](https://user-images.githubusercontent.com/63620832/187092418-53427ed7-6528-43d6-a383-bd95826a8a82.jpg)

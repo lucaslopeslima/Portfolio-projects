@@ -15,7 +15,7 @@
 - Criação do projeto
   - HTML
   - CSS
-- Projeto Flashlight
+- Projeto Pratica de Cores
   - Reset
   - Linear gradient background
   - Font color gradient

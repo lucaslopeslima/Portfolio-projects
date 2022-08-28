@@ -1,5 +1,5 @@
 # To Do List - React
- React App - ToDo List
+ React App - ToDo List App construido durante meu curso de Desenvolvimento Web Full-Stack.
  
 
 ![capa](https://user-images.githubusercontent.com/63620832/187092145-bf9c50c7-6bbb-4aed-aab0-04fdbc345d01.jpg)

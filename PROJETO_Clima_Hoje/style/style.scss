@@ -1,0 +1,199 @@
+//IMPORTS
+@import 'animate';
+@import 'medias';
+
+//RESET GLOBAL
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+///////////////////////////////////////////
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    position: relative;
+    width: 80vw;
+    max-width: 400px;
+    height: 80vh;
+    max-height: 675px;
+    overflow: hidden;
+    .background{
+        /* background-color: red; */
+        background-image: url('../img/clouds-3994154_960_720.jpg');
+        background-image: url('../img/star-4167939_960_720.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 35px;
+        /* width: 80vw;
+        max-width: 500px;
+        height: 80vh; */
+        height: 100%;
+        padding: 25px;
+        padding-top: 50px;
+        .input-wrap{
+            z-index: 9999;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 40px;
+            scale: 1.2;
+            //animation: inputSlide 1.5s ease-in-out .5s forwards;
+                //name duration mode delay interation
+            background-color: rgba(255, 255, 255, 0.324);
+            width: fit-content;
+            padding: 3px;
+            padding-left: 6px;
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+            color: rgba(255, 255, 255, 0.85);
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.383);
+            }
+            input{
+                background-color: #ffffff00;
+                color: white;
+                border: none;
+                border-bottom: 1px solid #d6d5d5;
+                border-radius: 2px;
+                padding: 2px;
+                font-weight: bold;
+                &:focus{
+                    /* border: none; */
+                    outline: none;
+                }
+            }
+            button{
+                padding: 6px;
+                border-radius: 5px;
+                border: none;
+                border-top: 1px solid #ffffff61;
+                background-color: #5c5c5cad;
+                color: white;
+                &:active{
+                    border: none;
+                    padding-top: 7px;
+                    background-color: #3c3c3cad;
+                }
+            }
+        }
+        .display{
+            opacity: 0;
+            //animation: displayOn 1.5s ease-in-out 2.5s forwards;
+                //name duration mode delay interation
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+            font-family: 'Playfair Display', serif;
+            /* background-color: green; */
+          
+            .temp{
+                font-size: 17em;
+                background: -webkit-linear-gradient(#ffffff, #ffffff34);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .temp-scale{
+                font-size: 6em;
+                background: -webkit-linear-gradient(#ffffff, #ffffff34);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                position: absolute;
+                top: 120px;
+                font-family: 'Open Sans', sans-serif;
+            }
+        }
+    }
+    .pannel{
+        /* width: 80vw;
+        max-width: 500px; */
+        width: 100%;
+        height: 200px;
+        /* background-color: #e1e1e1; */
+        background-color: #ffffff;
+        border-radius: 0px 0px 35px 35px;
+        position: absolute;
+        bottom: 0;
+        /* box-shadow: 0px -14px 7px 0px rgba(0,0,0,0.29); */
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(123, 123, 123);
+
+        svg{
+            /* background-color: green; */
+            /* transform: translateY(-50%); */
+            width: 100%;
+            //animation: svgSlideUp .5s linear 4.5s forwards;
+                //name duration mode delay interation
+        }
+        .pannel-content{
+            border-radius: 0px 0px 35px 35px;
+            padding: 5px;
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            h1{
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+        transform: translateY(+150%);
+        //animation: pannelUp 1.5s ease-out 2.5s forwards;
+                //name duration mode delay interation
+        .icons-wrap{
+            /* background-color: green; */
+            width: 95%;
+            height: 80%;
+            margin: 0 auto;
+
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 20px;
+                color: rgb(197, 196, 196);
+                .icons-display{
+                    width: 30%;
+                    height: 90px;
+                    text-align: center;
+                    /* background-color: red; */
+                    i{
+                        font-size: 2rem;
+                        margin-bottom: 15px;
+                        
+                    }
+                    img{
+                        width: 52px;
+                        height: 52px;
+                        margin-bottom: 15px;
+                    }
+                    
+                }
+                .lat-long{
+                    opacity: 0;
+                    //animation: latlong .5s linear 4.5s forwards;
+                            //name duration mode delay interation
+                }
+                .windspeed{
+                    opacity: 0;
+                    //animation: windspeed .5s linear 4.8s forwards;
+                            //name duration mode delay interation
+                }
+                .weathercode{
+                    opacity: 0;
+                    //animation: wheatercode .5s linear 5s forwards;
+                            //name duration mode delay interation
+                }
+            }
+        }
+    }
+}
+

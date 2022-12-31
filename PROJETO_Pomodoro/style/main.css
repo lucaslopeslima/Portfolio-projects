@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  color: var(--font-color);
+  font-weight: 200 !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .app-container {
+  width: 98vw;
+  max-width: 500px;
+}
+
+.app .app-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 55px;
+}
+
+.app .app-container .stage {
+  margin-top: 10px;
+  background-color: var(--stage-bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  height: 65px;
+  border-radius: 33px;
+}
+
+.app .app-container .stage .stage-item {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 100%;
+  border-radius: 33px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 155px;
+}
+
+.app .app-container .stage .stage-item h2 {
+  font-weight: 300;
+}
+
+.app .app-container .stage .stage-item-active {
+  background-color: var(--progress);
+}
+
+.app .app-container .timer {
+  margin-top: 75px;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+          box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+  background: var(--display-bg);
+  padding: 10px;
+  background: conic-gradient(var(--progress) var(--angle), #282727 0 360deg);
+  -webkit-animation: progress var(--duration) 1s linear alternate infinite;
+          animation: progress var(--duration) 1s linear alternate infinite;
+  /* animation: progress var(--duration) 1s linear forwards; */
+  margin-bottom: 50px;
+}
+
+.app .app-container .timer .display {
+  background-color: var(--bg);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.app .app-container .timer .display h2 {
+  font-size: 5rem;
+  font-family: var(--font-timer);
+}
+
+.app .app-container .timer .start-stop {
+  width: 100%;
+  position: absolute;
+  bottom: 80px;
+  /* left: 50%; */
+  /* transform: translate(-50%); */
+  text-align: center;
+  cursor: pointer;
+}
+
+.app .app-container .timer .start-stop h2 {
+  font-size: 2.5rem;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  color: var(--menu);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.app .app-container .timer .start-stop h2:hover {
+  color: white;
+}
+
+.app .app-container .settings {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+}
+
+.app .app-container .settings i {
+  font-size: 2.3rem;
+  color: var(--menu);
+  cursor: pointer;
+}
+
+.app .app-container .settings i:hover {
+  color: white;
+}
+
+@-webkit-keyframes progress {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes progress {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  /* this can be angle or percentage */
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --bg: #1E2140;
+  --stage-bg: #14162b;
+  --menu: #7C7F9E;
+  --progress: #F77072;
+  --radial-gradient: radial-gradient(ellipse at center, #1C6EA4 0%, #1C6EA4 50%, #090602 100%);
+  --font-timer: 'Chakra Petch', sans-serif;
+  --font-body: 'Mukta', sans-serif;
+  --font-color: white;
+  --normal-ring: #17171a;
+  --display-bg: radial-gradient(71.4% 71.4% at 51.7% 28.6%, #3a393f 0%, #17171a 100%);
+  --duration: 10s;
+}
+
+.modal {
+  background-color: #0000006b;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal .modal-content {
+  background-color: white;
+  color: black;
+  width: 500px;
+  border-radius: 20px;
+  font-weight: lighter;
+}
+
+.modal .modal-content .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal .modal-content .modal-header h2 {
+  font-weight: bold;
+}
+
+.modal .modal-content .modal-header .button-x {
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal .modal-content .modal-header .button-x i {
+  font-size: 2rem;
+}
+
+.modal .modal-content .modal-body {
+  padding: 20px 40px;
+}
+
+.modal .modal-content .modal-body .time-input {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.modal .modal-content .modal-body .time-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.modal .modal-content .modal-body .time-wrap .time-item {
+  margin-top: 20px;
+}
+
+.modal .modal-content .modal-body .time-wrap .time-item h2 {
+  font-size: .9rem;
+}
+
+.modal .modal-content .modal-body .time-wrap .time-item input {
+  max-width: 80px;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.modal .modal-content .modal-body .modal-line {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 1px;
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.modal .modal-content .modal-body .modal-font {
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .modal-content .modal-body .modal-font span {
+  font-size: .7rem;
+  font-style: italic;
+}
+
+.modal .modal-content .modal-body .modal-font .font-button {
+  width: 40px;
+  height: 40px;
+  background-color: #acacac;
+  margin-left: 15px;
+  border-radius: 50%;
+}
+
+.modal .modal-content .modal-body .modal-font .active-font-button {
+  background-color: #545454;
+  color: white;
+}
+
+.modal .modal-content .modal-body .modal-color {
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .modal-content .modal-body .modal-color span {
+  font-size: .7rem;
+  font-style: italic;
+}
+
+.modal .modal-content .modal-body .modal-color .color-wrap .color-item {
+  width: 40px;
+  height: 40px;
+  background-color: #acacac;
+  margin-left: 15px;
+  border-radius: 50%;
+}
+
+.modal .modal-content .modal-body .modal-color .color-wrap .modal-color-1 {
+  background-color: #c77c7e;
+}
+
+.modal .modal-content .modal-apply {
+  background-color: #fe6464;
+  width: 150px;
+  height: 70px;
+  border-radius: 35px;
+  margin: 0 auto;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  cursor: pointer;
+}
+
+.modal .modal-content .modal-apply h2 {
+  color: white;
+}
+
+:root {
+  --bg: #1E2140;
+  --stage-bg: #14162b;
+  --menu: #7C7F9E;
+  --progress: #F77072;
+  --radial-gradient: radial-gradient(ellipse at center, #1C6EA4 0%, #1C6EA4 50%, #090602 100%);
+  --font-timer: 'Chakra Petch', sans-serif;
+  --font-body: 'Mukta', sans-serif;
+  --font-color: white;
+  --normal-ring: #17171a;
+  --display-bg: radial-gradient(71.4% 71.4% at 51.7% 28.6%, #3a393f 0%, #17171a 100%);
+  --duration: 10s;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::before, &::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+html, body{
+    height: 100%;
+    font-family: var(--font-body);
+    color: var(--font-color);
+    font-weight: 200 !important;
+    user-select: none;
+}
+///////////////////////////////////////////////////////////////
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .app-container{
+        width: 98vw;
+        max-width: 500px;
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 55px;
+        }
+        .stage{
+            margin-top: 10px;
+            background-color: var(--stage-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            height: 65px;
+            border-radius: 33px;
+            .stage-item{
+                cursor: pointer;
+                user-select: none;
+                height: 100%;
+                border-radius: 33px;
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 155px;
+                h2{
+                    font-weight: 300;
+                }
+            }
+            .stage-item-active{
+                background-color: var(--progress);
+            }
+        }
+        .timer{
+            margin-top: 75px;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+            background: var(--display-bg);
+            padding: 10px;
+            background: conic-gradient(
+            var(--progress) var(--angle),
+            #282727 0 360deg,
+            );
+            animation: progress var(--duration) 1s linear alternate infinite;
+            /* animation: progress var(--duration) 1s linear forwards; */
+            .display{
+                background-color: var(--bg);
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                h2{
+                    font-size: 5rem;
+                    font-family: var(--font-timer);
+                }
+            }
+            .start-stop{
+                width: 100%;
+                position: absolute;
+                bottom: 80px;
+                /* left: 50%; */
+                /* transform: translate(-50%); */
+                text-align: center;
+                h2{
+                    font-size: 2.5rem;
+                    letter-spacing: 15px;
+                    text-transform: uppercase;
+                    color: var(--menu);
+                    transition: all .2s ease;
+                    &:hover{
+                        color: white;
+                    }
+                }
+                cursor: pointer;
+            }
+            margin-bottom: 50px;
+        }
+        .settings{
+            width: 35px;
+            height: 35px;
+            margin: 0 auto;
+            i{
+                font-size: 2.3rem;
+                color: var(--menu);
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@import 'animation';
+@import 'modal';
+@import 'root';

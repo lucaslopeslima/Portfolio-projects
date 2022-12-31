@@ -1,0 +1,61 @@
+:root{
+    --bg-color: black;
+    --font-color: white;
+    --color-btn: #00AEFF;
+    --color-btn-hover:#38bdfb;
+    --color-banner-bg1: #0F1218;
+    --color-banner-bg2: #060608;
+    --color-banner-dropdown-footer:#0F1114;
+    --font-family: 'Poppins', sans-serif;
+    --transition: all .3s ease-in-out;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #000000;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: var(--color-btn);
+border-radius: 1px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: var(--color-btn-hover);
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    overflow-x: hidden;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+.padding-standard{
+    /* padding: 0 170px 0 170px; */
+    //padding: 0 10vw 0 10vw;
+    padding: 0 15vw 0 15vw;
+}
+
+
+
+@import 'header';
+@import 'jogosExclusivos';
+@import 'footer';
+@import 'media';
+@import 'modal';

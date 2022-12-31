@@ -1,0 +1,100 @@
+.jogos-exclusivos{
+    /* background-color: rgb(0, 50, 0); */
+    width: 100%;
+    height: fit-content;
+    .main-header{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 20px;
+        .games{
+            height: 120px;
+            color: gray;
+        }
+        .jogos-exc{
+            font-size: 2rem;
+            width: 280px;
+            margin-left: 15px;
+        }
+        .icons{
+            height: 50px;
+            width: 200px;
+            font-size: 1.5rem;
+            i{
+                margin-left: 20px;
+            }
+        }
+        .all-games{
+            color: var(--color-btn);
+        }
+    }
+
+    .main-content{
+        /* background-color: green; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .jogos-item{
+            /* background-color: red; */
+            //width: 300px;
+            width: 290px;
+            width: 260px;
+            //width: 20%;
+            height: min-content;
+            box-sizing: content-box;
+            padding: 20px;
+            margin-bottom: 25px;
+            cursor: pointer;
+            .img-wrap{
+                //height: 413px;
+                position: relative;
+                overflow: hidden;
+                /* background-color: green; */
+                .jogos-exc-logo{
+                    width: 70%;
+                    margin: 0 auto;
+                    margin-top: -160px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+                div{
+                    img{
+                       width: 100%; 
+                    }
+                    
+                }
+            }
+            .jogos-text{
+                width: 100%;
+                /* background-color: blue; */
+            }
+            .imagem-exc{
+                transition: var(--transition);
+            }
+            /* .jogos-exc-logo{
+                position: relative;
+                z-index: 2;
+            } */
+            &:hover{
+                .imagem-exc{
+                    scale: 1.1;
+                }
+            }
+        }
+        .jogos-item-all{
+            height: 100%;
+            height: 357.73px;
+            border: 1px solid white;
+            justify-content: center;
+            text-align: center;
+            .jogos-text-all{
+                margin-top: 25px;
+            }
+        }
+    }
+}

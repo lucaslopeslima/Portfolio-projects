@@ -1,0 +1,1253 @@
+:root {
+  --bg-color: black;
+  --font-color: white;
+  --color-btn: #00AEFF;
+  --color-btn-hover:#38bdfb;
+  --color-banner-bg1: #0F1218;
+  --color-banner-bg2: #060608;
+  --color-banner-dropdown-footer:#0F1114;
+  --font-family: 'Poppins', sans-serif;
+  --transition: all .3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-btn);
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-btn-hover);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.padding-standard {
+  /* padding: 0 170px 0 170px; */
+  padding: 0 15vw 0 15vw;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .top-menu {
+  height: 80px;
+  position: relative;
+}
+
+header .top-menu .top-menu-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .top-menu .top-menu-content .logo {
+  margin-right: 25px;
+}
+
+header .top-menu .top-menu-content .top-links {
+  width: 55vw;
+  max-width: 700px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 9999;
+}
+
+header .top-menu .top-menu-content .top-links .dropbtn {
+  z-index: 9999;
+}
+
+header .top-menu .top-menu-content .top-links .menu-links {
+  cursor: pointer;
+}
+
+header .top-menu .top-menu-content .top-links .dropdown {
+  /* display: inline-block; */
+}
+
+header .top-menu .top-menu-content .top-links .dropdown .dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+header .top-menu .top-menu-content .top-links .dropdown .dropbtn i {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .top-menu .top-menu-content .top-links .dropdown .dropbtn .arrow-color-active {
+  color: var(--color-btn);
+}
+
+header .top-menu .top-menu-content .top-links .dropdown .dropbtn .arrow-color-active i {
+  -webkit-transform: rotate3d(1, 0, 0, 180deg);
+          transform: rotate3d(1, 0, 0, 180deg);
+}
+
+header .top-menu .top-menu-content .top-btn-wrap {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* width: 400px; */
+}
+
+header .top-menu .top-menu-content .top-btn-wrap .top-btn {
+  padding: 10px;
+  margin-left: 20px;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .top-menu .top-menu-content .top-btn-wrap .btn-criar-acc {
+  background-color: #ffffff00;
+  border: 1px solid white;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .top-menu .top-menu-content .top-btn-wrap .btn-criar-acc:hover {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+header .top-menu .top-menu-content .top-btn-wrap .btn-logar {
+  background-color: var(--color-btn);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .top-menu .top-menu-content .top-btn-wrap .btn-logar:hover {
+  background-color: var(--color-btn-hover);
+}
+
+header .top-menu .top-menu-content .top-btn-wrap .menu-mobile {
+  display: none;
+}
+
+header .top-menu-line {
+  position: relative;
+  z-index: 9999;
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+}
+
+header .top-menu-line .top-menu-line-blue {
+  height: 250%;
+  width: 50px;
+  background-color: var(--color-btn);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .top-menu-bg {
+  background-color: var(--color-banner-bg);
+}
+
+header .content-wrap {
+  /* background-color: red; */
+  height: calc(85vh - 80px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .content-wrap .left-menu .left-menu-item {
+  cursor: pointer;
+  margin-top: 25px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .content-wrap .left-menu .left-menu-active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+header .content-wrap .left-menu .left-menu-item-disabled {
+  margin-top: 25px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .content-wrap .presentation {
+  margin-left: 100px;
+}
+
+header .content-wrap .presentation h1 {
+  font-size: 5rem;
+  width: 700px;
+  margin-bottom: 10px;
+}
+
+header .content-wrap .presentation .presetation-btn {
+  margin-top: 25px;
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--color-btn);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+header .content-wrap .presentation .presetation-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+header .content-wrap .presentation-gif {
+  /* position: absolute;
+            right: 0; */
+}
+
+header .content-wrap .presentation-gif .presentation-gif-logo {
+  /* background-color: black; */
+  width: 100%;
+  /* width: 200px; */
+  height: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 100%;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  text-align: right;
+}
+
+header .content-wrap .presentation-gif p {
+  margin-top: 140px;
+  width: 100%;
+  text-align: right;
+}
+
+header .content-wrap .presentation-gif .presentation-gif-item {
+  width: 350px;
+  height: 200px;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-btn);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+}
+
+header .content-wrap .presentation-gif .presentation-gif-item:hover i {
+  display: none;
+}
+
+header .content-wrap .presentation-gif .diablo-gif {
+  background-image: url("../img/banner-hero/games/diablo-animation-cover.webp");
+}
+
+header .content-wrap .presentation-gif .diablo-gif:hover {
+  background-image: url("../img/banner-hero/games/diablo-animation.gif");
+}
+
+header .content-wrap .presentation-gif .heartstone-gif {
+  background-image: url("../img/banner-hero/games/hearthstone-animation-cover.webp");
+}
+
+header .content-wrap .presentation-gif .heartstone-gif:hover {
+  background-image: url("../img/banner-hero/games/hearthstone-animation.gif");
+}
+
+header .content-wrap .presentation-gif .wow-gif {
+  background-image: url("../img/banner-hero/games/wow-animation-cover.webp");
+}
+
+header .content-wrap .presentation-gif .wow-gif:hover {
+  background-image: url("../img/banner-hero/games/wow-animation.gif");
+}
+
+header .header-progress-bar {
+  background-color: var(--color-btn);
+  height: 2px;
+  width: 30%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.diabloiv {
+  background-image: url("../img/banner-hero/games/diablo-bg.webp");
+}
+
+.diabloiv-gif-logo {
+  background-image: url("../img/banner-hero/games/diablo-logo.webp");
+}
+
+.heartstone {
+  background-image: url("../img/banner-hero/games/hearthstone-bg.webp");
+}
+
+.heartstone-gif-logo {
+  background-image: url("../img/banner-hero/games/hearthstone-logo.webp");
+}
+
+.wow {
+  background-image: url("../img/banner-hero/games/wow-bg.webp");
+}
+
+.wow-gif-logo {
+  background-image: url("../img/banner-hero/games/wow-logo.webp");
+}
+
+.header-line {
+  width: 100vw;
+  height: 2px;
+  background-color: #c3c3c3;
+  z-index: 99999;
+}
+
+.jogos {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  margin-top: 85px;
+}
+
+.z-index {
+  z-index: 9999;
+}
+
+.dropdown-content {
+  /* overflow-x: hidden; */
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  display: none;
+  position: absolute;
+  top: 0;
+  background: #040406;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--color-banner-bg1)), to(var(--color-banner-bg2)));
+  background: linear-gradient(to bottom, var(--color-banner-bg1) 0%, var(--color-banner-bg2) 100%);
+  width: 100%;
+  height: 800px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content .dropdown-content-container {
+  /* background-color: blue; */
+  height: 100%;
+  position: relative;
+  padding-top: 80px;
+}
+
+.dropdown-content .dropdown-content-container .drowdown-items {
+  /* background-color: yellow; */
+  /* margin: 0 20px; */
+  width: 100%;
+  height: 100%;
+  /* justify-content: space-around; */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 15px;
+  padding-bottom: 180px;
+}
+
+.dropdown-content .dropdown-content-container .drowdown-items .dropdown-jogos-item {
+  /* background-color: green; */
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
+  /* height: 70px;
+                height: fit-content;
+                height: 200px; */
+  color: #9d9d9d;
+  text-align: center;
+  /* margin-left: 100px; */
+  margin-left: 20px;
+}
+
+.dropdown-content .dropdown-content-container .drowdown-items .dropdown-jogos-item img {
+  /* width: 100%;
+                    height: auto; */
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-filter: grayscale(0.4);
+          filter: grayscale(0.4);
+}
+
+.dropdown-content .dropdown-content-container .drowdown-items .dropdown-jogos-item p {
+  /* background-color: red; */
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 70%;
+  font-size: 1.3rem;
+  text-align: center;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.dropdown-content .dropdown-content-container .drowdown-items .dropdown-jogos-item:hover img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.dropdown-content .dropdown-content-container .drowdown-items .dropdown-jogos-item:hover p {
+  color: white;
+}
+
+.dropdown-content .dropdown-content-container .dropdown-footer {
+  background-color: var(--color-banner-dropdown-footer);
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: var(--color-btn);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dropdown-content .dropdown-content-container .dropdown-footer .footer-item {
+  margin-left: 45px;
+}
+
+.dropdown-content .dropdown-content-container .dropdown-footer span {
+  color: white;
+  margin-left: 10px;
+}
+
+.dropdown-content-active {
+  display: block;
+}
+
+.jogos-exclusivos {
+  /* background-color: rgb(0, 50, 0); */
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.jogos-exclusivos .main-header {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding: 20px;
+}
+
+.jogos-exclusivos .main-header .games {
+  height: 120px;
+  color: gray;
+}
+
+.jogos-exclusivos .main-header .jogos-exc {
+  font-size: 2rem;
+  width: 280px;
+  margin-left: 15px;
+}
+
+.jogos-exclusivos .main-header .icons {
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
+}
+
+.jogos-exclusivos .main-header .icons i {
+  margin-left: 20px;
+}
+
+.jogos-exclusivos .main-header .all-games {
+  color: var(--color-btn);
+}
+
+.jogos-exclusivos .main-content {
+  /* background-color: green; */
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jogos-exclusivos .main-content .jogos-item {
+  /* background-color: red; */
+  width: 290px;
+  width: 260px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 20px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  /* .jogos-exc-logo{
+                position: relative;
+                z-index: 2;
+            } */
+}
+
+.jogos-exclusivos .main-content .jogos-item .img-wrap {
+  position: relative;
+  overflow: hidden;
+  /* background-color: green; */
+}
+
+.jogos-exclusivos .main-content .jogos-item .img-wrap .jogos-exc-logo {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: -160px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.jogos-exclusivos .main-content .jogos-item .img-wrap div img {
+  width: 100%;
+}
+
+.jogos-exclusivos .main-content .jogos-item .jogos-text {
+  width: 100%;
+  /* background-color: blue; */
+}
+
+.jogos-exclusivos .main-content .jogos-item .imagem-exc {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.jogos-exclusivos .main-content .jogos-item:hover .imagem-exc {
+  scale: 1.1;
+}
+
+.jogos-exclusivos .main-content .jogos-item-all {
+  height: 100%;
+  height: 357.73px;
+  border: 1px solid white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.jogos-exclusivos .main-content .jogos-item-all .jogos-text-all {
+  margin-top: 25px;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+footer .footer-right-container {
+  width: 65%;
+  height: 100%;
+  background-image: url("../img/ilustrations/app.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer .footer-right-container .app-mini {
+  background-image: url("../img/ilustrations/app-mini.png");
+  background-repeat: no-repeat;
+  /* position: absolute;
+            right: 0; */
+  width: 100%;
+  height: 100%;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.footer-container {
+  height: 80vh;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  background-image: url("../img/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.footer-container .footer-left-container {
+  height: 100%;
+  width: 30vw;
+}
+
+.footer-container .footer-left-container .battle-net-txt {
+  /* background-color: blue; */
+  color: #a1a1a1;
+}
+
+.footer-container .footer-left-container .battle-net-txt div {
+  color: var(--color-btn);
+  margin-right: 5px;
+  width: 20px;
+  display: inline-block;
+}
+
+.footer-container .footer-left-container .battle-net-txt h2 {
+  /* background-color: red; */
+  min-width: 200px;
+  width: 25vw;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer-container .footer-left-container .battle-net-txt p {
+  margin-bottom: 15px;
+}
+
+.footer-container .footer-left-container .footer-btn {
+  margin-top: 25px;
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  background-color: var(--color-btn);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.footer-container .footer-left-container .footer-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.footer-container .footer-left-container .footer-btn span {
+  margin-left: 15px;
+}
+
+.footer-container .footer-left-container .footer-misc {
+  width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-container .footer-left-container .footer-misc div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+.footer-container .footer-left-container .footer-misc p {
+  margin-left: 15px;
+}
+
+.footer-container .footer-left-container .footer-misc p span {
+  text-decoration: underline;
+}
+
+.footer-container .footer-right-container {
+  width: 65vw;
+  height: 100%;
+  background-image: url("../img/ilustrations/app.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  top: 0;
+  right: 5vw;
+}
+
+.footer-container .footer-right-container .app-mini {
+  background-image: url("../img/ilustrations/app-mini.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+@media (max-width: 1920px) {
+  .padding-standard {
+    padding: 0 15vw 0 15vw;
+  }
+  footer .footer-container {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .padding-standard {
+    padding: 0 10vw 0 10vw;
+  }
+  header .presentation {
+    margin-left: 100px;
+  }
+  header .presentation h1 {
+    font-size: 4rem;
+    width: 600px;
+    margin-bottom: 10px;
+  }
+  main .jogos-item {
+    width: 240px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .jogos-exc-logo {
+    margin-top: -130px !important;
+  }
+  main .jogos-item-all {
+    height: 330px !important;
+  }
+  footer .footer-right-container {
+    width: 65vw;
+    background-image: url("../img/ilustrations/app.png");
+    background-repeat: no-repeat;
+    background-position: left !important;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(100px) !important;
+            transform: translate(100px) !important;
+  }
+  footer .footer-right-container .app-mini {
+    background-image: url("../img/ilustrations/app-mini.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position-x: right;
+    background-position-y: bottom;
+    -webkit-transform: translate(100px) !important;
+            transform: translate(100px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .padding-standard {
+    padding: 0 5vw 0 5vw;
+  }
+  header .top-links {
+    display: none;
+  }
+  header .top-btn-wrap .menu-mobile {
+    display: inline-block !important;
+    width: 50px;
+    text-align: center;
+    height: 100%;
+    margin-left: 100px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  header .top-btn-wrap .menu-mobile-active {
+    color: var(--color-btn);
+  }
+  header .content-wrap {
+    position: relative !important;
+  }
+  header .content-wrap .presentation-gif {
+    position: absolute;
+    right: 5vw;
+  }
+  header .content-wrap .presentation-gif p {
+    display: none;
+  }
+  header .content-wrap .presentation-gif .presentation-gif-logo {
+    margin-bottom: 300px;
+  }
+  header .presentation-content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .presentation-content-wrap .left-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header .presentation-content-wrap .left-menu .left-menu-item {
+    margin-left: 15px !important;
+  }
+  header .presentation-content-wrap .left-menu .left-menu-item-disabled {
+    margin-left: 15px !important;
+  }
+  header .presentation-content-wrap .presentation {
+    margin-left: 0;
+  }
+  header .presentation-content-wrap .presentation h1 {
+    font-size: 3.5rem;
+    width: 500px;
+    margin-bottom: 10px;
+  }
+  main .jogos-item {
+    width: 190px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .jogos-exc-logo {
+    margin-top: -110px !important;
+  }
+  main .jogos-item-all {
+    height: 261px !important;
+  }
+  footer .footer-left-container {
+    width: 50vw !important;
+  }
+  footer .footer-right-container {
+    width: 65vw;
+    background-image: url("../img/ilustrations/app.png");
+    background-repeat: no-repeat;
+    background-position: left !important;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(100px) !important;
+            transform: translate(100px) !important;
+  }
+  footer .footer-right-container .app-mini {
+    background-image: url("../img/ilustrations/app-mini.png");
+    background-repeat: no-repeat;
+    width: 160%;
+    height: 100%;
+    background-position-x: right;
+    background-position-y: bottom;
+    -webkit-transform: translate(200px) !important;
+            transform: translate(200px) !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .padding-standard {
+    padding: 0 2vw 0 2vw;
+  }
+  header {
+    width: 100%;
+    height: 90vh;
+  }
+  header .left-menu {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 85px;
+  }
+  header .top-menu {
+    height: 70px;
+  }
+  header .media-top-btn {
+    display: none;
+  }
+  header .presentation-content-wrap {
+    height: 100%;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+  header .presentation-gif {
+    display: none;
+  }
+  header .banner-title {
+    width: 90% !important;
+    font-size: 3rem !important;
+  }
+  header .header-progress-bar {
+    -webkit-transform: translateY(2700%);
+            transform: translateY(2700%);
+  }
+  main .icons, main .games {
+    display: none;
+  }
+  main .jogos-exc {
+    font-size: 1rem !important;
+  }
+  main .jogos-item {
+    width: 140px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: -20px !important;
+  }
+  main .jogos-exc-logo {
+    margin-top: -100px !important;
+  }
+  main .jogos-item-all {
+    height: 192px !important;
+  }
+  main .jogos-text {
+    display: none;
+  }
+  footer {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  footer .footer-container {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-bottom: 25px;
+    padding-left: 40px;
+  }
+  footer .footer-container .footer-left-container {
+    width: 95% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  footer .footer-right-container {
+    display: none !important;
+    width: 100%;
+    height: 550px;
+    margin-top: 550px;
+  }
+}
+
+@media (max-width: 375px) {
+  .padding-standard {
+    padding: 0 2vw 0 2vw;
+  }
+  header {
+    width: 100%;
+    height: 90vh;
+  }
+  header .left-menu {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 85px;
+  }
+  header .top-menu {
+    height: 70px;
+  }
+  header .media-top-btn {
+    display: none;
+  }
+  header .presentation-content-wrap {
+    height: 100%;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+  header .presentation-gif {
+    display: none;
+  }
+  header .banner-title {
+    width: 90% !important;
+    font-size: 3rem !important;
+  }
+  header .header-progress-bar {
+    -webkit-transform: translateY(2700%);
+            transform: translateY(2700%);
+  }
+  main .icons, main .games {
+    display: none;
+  }
+  main .jogos-exc {
+    font-size: 1rem !important;
+  }
+  main .jogos-item {
+    width: 140px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: -20px !important;
+  }
+  main .jogos-exc-logo {
+    margin-top: -100px !important;
+  }
+  main .jogos-item-all {
+    height: 192px !important;
+  }
+  main .jogos-text {
+    display: none;
+  }
+  footer {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  footer .footer-container {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-bottom: 25px;
+    padding-left: 40px;
+  }
+  footer .footer-container .footer-left-container {
+    width: 95% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  footer .footer-right-container {
+    display: none !important;
+    width: 100%;
+    height: 550px;
+    margin-top: 550px;
+  }
+}
+
+.modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+  font-family: var(--font-family);
+}
+
+.modal .modal-content {
+  width: 90%;
+  padding: 85px;
+  max-width: 550px;
+  background-image: url("../img/modal/diablo-3-wallpaper.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -webkit-box-shadow: inset 0px 0px 18px 20px black;
+          box-shadow: inset 0px 0px 18px 20px black;
+  -webkit-box-shadow: inset 0px 0px 18px 20px #000000, inset 0px 0px 45px 30px #3d3d3d;
+          box-shadow: inset 0px 0px 18px 20px #000000, inset 0px 0px 45px 30px #3d3d3d;
+}
+
+.modal .modal-content .modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 5px;
+  text-align: right;
+  color: var(--color-btn);
+  cursor: pointer;
+}
+
+.modal .modal-content .modal-close:hover {
+  color: var(--color-btn-hover);
+}
+
+.modal .modal-content .modal-logo {
+  text-align: center;
+}
+
+.modal .modal-content .modal-logo img {
+  height: 20px;
+}
+
+.modal .modal-content .modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal .modal-content .modal-form input {
+  height: 45px;
+  border-radius: 5px;
+  border-style: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  outline: none;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.modal .modal-content .modal-form .modal-btn {
+  background-color: var(--color-btn);
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+
+.modal .modal-content .modal-form .modal-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.modal .modal-content .modal-conect {
+  text-align: center;
+}
+
+.modal .modal-content .modal-conect p {
+  font-size: .8rem;
+  margin-bottom: 15px;
+}
+
+.modal .modal-content .modal-conect div p {
+  font-size: 1rem;
+}
+
+.modal .modal-content .modal-conect div p a {
+  color: var(--color-btn);
+  text-decoration: underline;
+}
+
+.modal .modal-content .modal-conect .modal-icons {
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.modal .modal-content .modal-conect .modal-icons .modal-icon {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  color: black;
+  font-size: 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=main.css.map */

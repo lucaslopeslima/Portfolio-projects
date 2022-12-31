@@ -1,0 +1,105 @@
+.modal{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 1);
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 99999999;
+    font-family: var(--font-family);
+    .modal-content{
+        width: 90%;
+        padding: 85px;
+        max-width: 550px;
+        background-image: url('../img/modal/diablo-3-wallpaper.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        box-shadow: inset 0px 0px 18px 20px hsla(0, 0%, 0%, 1);
+        box-shadow: inset 0px 0px 18px 20px #000000, inset 0px 0px 45px 30px #3d3d3d;
+        
+        .modal-close{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            padding: 5px;
+            text-align: right;
+            color: var(--color-btn);
+            cursor: pointer;
+            &:hover{
+                color: var(--color-btn-hover);
+            }
+        }
+        .modal-logo{
+            text-align: center;
+            img{
+                height: 20px;
+            }
+        }
+        .modal-form{
+            display: flex;
+            flex-direction: column;
+            input{
+                height: 45px;
+                border-radius: 5px;
+                border-style: none;
+                margin-bottom: 15px;
+                font-size: 1rem;
+                outline: none;
+                padding: 5px;
+                padding-left: 10px;
+            }
+            .modal-btn{
+                background-color: var(--color-btn);
+                width: 100%;
+                padding: 12px;
+                border-radius: 5px;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 45px;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--color-btn-hover);
+                }
+            }
+        }
+        .modal-conect{
+            text-align: center;
+            p{
+                font-size: .8rem;
+                margin-bottom: 15px;
+            }
+            div{
+                p{
+                    font-size: 1rem;
+                    a{
+                        color: var(--color-btn);
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .modal-icons{
+                width: 150px;
+                justify-content: space-between;
+                margin: 0 auto;
+                margin-bottom: 15px;
+                .modal-icon{
+                    cursor: pointer;
+                    display: flex;
+                    background-color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 3px;
+                    color: black;
+                    font-size: 1.3rem;
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+    
+}

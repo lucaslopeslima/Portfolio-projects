@@ -1,0 +1,352 @@
+header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    //width: 100vw;
+    height: 85vh;
+    min-height: min-content;
+    transition: var(--transition);
+    .top-menu{
+        height: 80px;
+        //border-bottom: 1px solid gray;
+        position: relative;
+        
+        .top-menu-content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                margin-right: 25px;
+            }
+            .top-links{
+                width: 55vw;
+                max-width: 700px;
+                justify-content: space-around;
+                z-index: 9999;
+                
+                .dropbtn{
+                    z-index: 9999;
+                }
+                .menu-links{
+                    cursor: pointer;
+                }
+                
+                .dropdown {
+                    /* display: inline-block; */
+                    .dropbtn {
+                        color: white;
+                        padding: 16px;
+                        font-size: 16px;
+                        border: none;
+                        i{
+                            transition: var(--transition);
+                        }
+                        
+                        .arrow-color-active{
+                            color: var(--color-btn);
+                            i{
+                                transform: rotate3d(1, 0, 0, 180deg);
+                            }
+                        }
+                    }
+                }
+            }
+            .top-btn-wrap{
+                justify-content: space-between;
+                /* width: 400px; */
+                .top-btn{
+                    padding: 10px;
+                    margin-left: 20px;
+                    width: 120px;
+                    text-align: center;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .btn-criar-acc{
+                    background-color: #ffffff00;
+                    border: 1px solid white;
+                    transition: var(--transition);
+                    &:hover{
+                        border: 1px solid black;
+                        background-color: white;
+                        color: black;
+                    }
+                }
+                .btn-logar{
+                    background-color: var(--color-btn);
+                    transition: var(--transition);
+                    &:hover{
+                        background-color: var(--color-btn-hover);
+                    }
+                }
+                .menu-mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+    .top-menu-line{
+        position: relative;
+        z-index: 9999;
+        height: 1px;
+        width: 100%;
+        background-color: gray;
+        .top-menu-line-blue{
+            height: 250%;
+            width: 50px;
+            background-color: var(--color-btn);
+            transform: translateY(-50%);
+        }
+    }
+    .top-menu-bg{
+        background-color: var(--color-banner-bg);
+    }
+    .content-wrap{
+        /* background-color: red; */
+        height: calc(85vh - 80px);
+        justify-content: space-between;
+        .left-menu{
+            .left-menu-item{
+                cursor: pointer;
+                margin-top: 25px;
+                filter: grayscale(1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }.left-menu-active{
+                filter: grayscale(0);
+            }
+            .left-menu-item-disabled{
+                margin-top: 25px;
+                filter: grayscale(1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .presentation{
+            margin-left: 100px;
+            h1{
+                font-size: 5rem;
+                width: 700px;
+                margin-bottom: 10px;
+            }
+            .presetation-btn{
+                margin-top: 25px;
+                padding: 15px;
+                width: fit-content;
+                text-align: center;
+                justify-content: center;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: var(--color-btn);
+                transition: var(--transition);
+                    &:hover{
+                        background-color: var(--color-btn-hover);
+                    }
+
+            }
+        }
+        .presentation-gif{
+            /* position: absolute;
+            right: 0; */
+            .presentation-gif-logo{
+                /* background-color: black; */
+                width: 100%;
+                /* width: 200px; */
+                height: 160px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-left: 100%;
+                transform: translate(-100%);
+                text-align: right;
+            }
+            p{
+                margin-top: 140px;
+                width: 100%;
+                text-align: right;
+            }
+            .presentation-gif-item{
+                width: 350px;
+                height: 200px;
+                background-color: black;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: var(--color-btn);
+                justify-content: center;
+                font-size: 3rem;
+                &:hover{
+                    i{
+                        display: none;
+                    }
+                }
+            }
+            .diablo-gif{
+                background-image: url('../img/banner-hero/games/diablo-animation-cover.webp');
+                &:hover{
+                    background-image: url('../img/banner-hero/games/diablo-animation.gif');
+                }
+            }
+            .heartstone-gif{
+                background-image: url('../img/banner-hero/games/hearthstone-animation-cover.webp');
+                &:hover{
+                    background-image: url('../img/banner-hero/games/hearthstone-animation.gif');
+                }
+            }
+            .wow-gif{
+                background-image: url('../img/banner-hero/games/wow-animation-cover.webp');
+                &:hover{
+                    background-image: url('../img/banner-hero/games/wow-animation.gif');
+                }
+            }
+        }
+        
+    }
+    .header-progress-bar{
+        background-color: var(--color-btn);
+        height: 2px;
+        width: 30%; //Alterar com JS para rastrear o progresso do menu esquerdo
+        transition: var(--transition);
+        transform: translateY(-100%);
+
+    }
+}
+.diabloiv{
+    background-image: url('../img/banner-hero/games/diablo-bg.webp');
+}
+.diabloiv-gif-logo{
+    background-image: url('../img/banner-hero/games/diablo-logo.webp');
+}
+.heartstone{
+    background-image: url('../img/banner-hero/games/hearthstone-bg.webp');
+}
+.heartstone-gif-logo{
+    background-image: url('../img/banner-hero/games/hearthstone-logo.webp');
+}
+.wow{
+    background-image: url('../img/banner-hero/games/wow-bg.webp');
+}
+.wow-gif-logo{
+    background-image: url('../img/banner-hero/games/wow-logo.webp');
+}
+
+.header-line{
+    width: 100vw;
+    height: 2px;
+    background-color: #c3c3c3;
+    z-index: 99999;
+}
+
+
+.jogos{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    margin-top: 85px;
+}
+.z-index{
+    z-index: 9999;
+}
+
+.dropdown-content{
+    /* overflow-x: hidden; */
+    transition: var(--transition);
+    display: none;
+    position: absolute;
+    //left: 0;
+    top: 0;
+    //background-color: var(--color-banner-bg);
+    background: #040406;
+    background: -moz-linear-gradient(top, var(--color-banner-bg1) 0%, var(--color-banner-bg2) 100%);
+    background: -webkit-linear-gradient(top, var(--color-banner-bg1) 0%, var(--color-banner-bg2) 100%);
+    background: linear-gradient(to bottom, var(--color-banner-bg1) 0%, var(--color-banner-bg2) 100%);
+    //min-width: 960px;
+    //min-width: 100%;
+    width: 100%;
+    height: 800px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    //z-index: 0;
+    .dropdown-content-container{
+        /* background-color: blue; */
+        //width: 100vw;
+        height: 100%;
+        position: relative;
+        padding-top: 80px;
+        .drowdown-items{
+            /* background-color: yellow; */
+            /* margin: 0 20px; */
+            width: 100%;
+            height: 100%;
+            /* justify-content: space-around; */
+            justify-content: space-between;
+            flex-wrap: wrap;
+            //padding: 50px;
+            padding-top: 15px;
+            padding-bottom: 180px;
+            .dropdown-jogos-item{
+                /* background-color: green; */
+                cursor: pointer;
+                flex: 1 1 15%;
+                //width: 200px;
+                /* height: 70px;
+                height: fit-content;
+                height: 200px; */
+                color: #9d9d9d;
+                text-align: center;
+                /* margin-left: 100px; */
+                margin-left: 20px;
+                //margin-top: -40px;
+                //flex-wrap: wrap;
+                img{
+                    /* width: 100%;
+                    height: auto; */
+                    transition: var(--transition);
+                    filter: grayscale(.4);
+                }
+                p{
+                    /* background-color: red; */
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    width: 70%;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    transition: var(--transition);
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.02);
+                        filter: grayscale(0);
+                    }
+                    p{
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+        .dropdown-footer{
+            background-color: var(--color-banner-dropdown-footer);
+            height: 80px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            color: var(--color-btn);
+            justify-content: center;
+            .footer-item{
+                margin-left: 45px;
+            }
+            span{
+                color: white;
+                margin-left: 10px;
+            }
+        }
+
+    }
+}
+.dropdown-content-active{
+    display: block;
+}
+

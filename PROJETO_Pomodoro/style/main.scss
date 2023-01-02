@@ -56,6 +56,8 @@ html, body{
                 padding-right: 20px;
                 width: 155px;
                 h2{
+                    text-align: center;
+                    font-size: 1.5rem;
                     font-weight: 300;
                 }
             }
@@ -65,8 +67,12 @@ html, body{
         }
         .timer{
             margin-top: 75px;
-            height: 500px;
-            width: 500px;
+            //height: 500px;
+            //width: 500px;
+            //height: 500px;
+            width: 95%;
+            max-width: 500px;
+            aspect-ratio: 1 / 1;
             border-radius: 50%;
             position: relative;
             box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
@@ -91,7 +97,8 @@ html, body{
             .start-stop{
                 width: 100%;
                 position: absolute;
-                bottom: 80px;
+                //bottom: 80px;
+                bottom: 15%;
                 /* left: 50%; */
                 /* transform: translate(-50%); */
                 text-align: center;
@@ -125,7 +132,7 @@ html, body{
     }
 }
 
-
+@import 'root';
 @import 'animation';
 @import 'modal';
-@import 'root';
+@import 'media';

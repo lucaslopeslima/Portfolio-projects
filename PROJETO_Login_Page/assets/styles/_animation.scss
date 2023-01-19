@@ -1,0 +1,44 @@
+@keyframes grayScale{
+    to{
+        filter: grayscale(1);
+    }
+}
+
+@keyframes modalBg{
+    /* from{
+        backdrop-filter: graysacle(1);
+    } */
+    to{
+        //backdrop-filter: graysacle(.9);
+        box-shadow: 0px 15px 25px 5px #00000096;
+    }
+}
+@keyframes formBg1{
+    from{
+        backdrop-filter: grayscale(0);
+    }
+    to{
+        backdrop-filter: grayscale(1);
+    }
+}
+@keyframes formBg2{
+    0%{
+        backdrop-filter: grayscale(1) blur(0px);
+    }
+    /* 50%{
+        backdrop-filter: grayscale(.5) blur(1.5px);
+        
+    } */
+    100%{
+        background-color: rgba(0, 0, 0, 0.137);
+        backdrop-filter: grayscale(0) blur(3px);
+    }
+}
+@keyframes opacityEffect{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
